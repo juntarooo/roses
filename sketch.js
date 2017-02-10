@@ -3,11 +3,8 @@
 var d = 8;
 var n = 5;
 
-// var block;
-// var sliderD;
-// var sliderN;
-// var sliderR;
-// var sliderB;
+var sliderR = 3;
+
 
 //color
 var col = {
@@ -18,31 +15,21 @@ var col = {
 };
 function setup() {
   canvas = createCanvas(600, 600);
-  frameRate(6);
-  textSize(20);
-  textSize(30);
-  textAlign(CENTER);
-  // // colorMode(HSB);
-  // sliderD = createSlider(0, 360, 60, 40);
-  // sliderD.position(10, 10);
-  // sliderD.style('width', '80px');
-  //
-  // sliderD = createSlider(1, 10, 5, 0.1);
-  // sliderN = createSlider(1, 10, 5, 0.1);
-  // sliderR = createSlider(100, 275, 1, 1);
-  // sliderB = createSlider(100, 175, 1, 1);
+
+  sliderR = createSlider(3, 30, 1, 1);
+
 
 }
 
 function draw() {
-    text(frameCount, 580, 580);
+    frameRate(sliderR.value());
     d = ceil(random(1,10));
     n = ceil(random(1,10));
     var k = n / d;
     background(51);
     translate(width / 2, height /2); // put drawing in center.
     beginShape();
-    for (var a = 0; a < TWO_PI * d; a += 0.05) {
+    for (var a = 0; a < TWO_PI * d; a += 0.1) {
       var r = 100 *cos(k*a);
       var x = r * cos(a);
       var y = r * sin(a);

@@ -1,0 +1,15 @@
+{
+  "name": "mathematicalroses",
+  "version": "1.0.0",
+  "description": "a rhodonea curve made using some basic trigonometry and js",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roses",
+    "math"
+  ],
+  "author": "Saswat Panda",
+  "license": "ISC"
+}
